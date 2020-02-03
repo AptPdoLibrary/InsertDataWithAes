@@ -1,11 +1,11 @@
 # AptLibrary
 How to use AptPhpLibrary functions
 
-How to Use MysqliInsertGivenDataWithAes function ->
+How to Use InsertDataWithAes function ->
 
 Call function :
 
-$Response = MysqliInsertGivenDataWithAes($GivenData,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass);
+$Response = InsertDataWithAes($GivenData,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass);
 
 Check Response :
 if($Response['status'] === 'Success' && $Response['code'] === 200){
