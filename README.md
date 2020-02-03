@@ -1,7 +1,7 @@
 # AptLibrary
 Here we provide library to make development easly
 
-Use ->
+How to Use MysqliInsertGivenDataWithAes function ->
 
 $Response = MysqliInsertGivenDataWithAes($GivenData,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass);
 Check Response -> 
