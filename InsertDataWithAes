@@ -6,7 +6,7 @@
 	*@Author - Arpit sharma
 	*/
 
-		function MysqliInsertGivenDataWithAes($GivenData,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass,$NullValueSupport=false){
+		function InsertDataWithAes($GivenData,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass,$NullValueSupport=false){
 			if(strlen($GivenData) == 0){
 				return ["status"=>"Error","msg"=>"Given Data must required"]; exit();
 			}
