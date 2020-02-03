@@ -1,12 +1,12 @@
 <?php
 	/*
 
-	*@Filename - InsertGivenData/index.php
+	*@Filename - MysqliInsertGivenDataWithAes.php
 	*@Des - We can insert data in mysql Database with Aes encryption using this function it return response after insert data into datanbase or return error if any error occur during data insert into mysql database
 	*@Author - Arpit sharma
 	*/
 
-		function InsertGivenData($GivenData,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass,$NullValueSupport=false){
+		function MysqliInsertGivenDataWithAes($GivenData,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass,$NullValueSupport=false){
 			if(strlen($GivenData) == 0){
 				return ["status"=>"Error","msg"=>"Given Data must required"]; exit();
 			}
@@ -63,9 +63,4 @@
 				return ["status"=>"Error","msg"=>"Some error occur! Try again later","code"=>400];
 			}
 		}
-		/*  Use ->
-			$Response = InsertGivenData($GivenData,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass);
-			Check Response -> 
-			if($Response['status'] === 'Success' && $Response['code'] === 200){}
-		*/
 ?>
