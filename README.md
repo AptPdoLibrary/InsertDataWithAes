@@ -1,5 +1,5 @@
 # AptLibrary
-Here we provide library to make development easly
+How to use AptPhpLibrary functions
 
 How to Use MysqliInsertGivenDataWithAes function ->
 
