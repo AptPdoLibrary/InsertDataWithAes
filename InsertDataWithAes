@@ -1,7 +1,7 @@
 <?php
 	/*
 
-	*@Filename - MysqliInsertGivenDataWithAes.php
+	*@Filename - InsertDataWithAes.php
 	*@Des - We can insert data in mysql Database with Aes encryption using this function it return response after insert data into datanbase or return error if any error occur during data insert into mysql database
 	*@Author - Arpit sharma
 	*/
