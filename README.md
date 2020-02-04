@@ -5,6 +5,10 @@ How to Use InsertDataWithAes function ->
 
 Call function :
 
+example Givendata -
+
+$GivenData = "Status::::Pending::,::Username::::$Username";
+
 $Response = InsertDataWithAes($GivenData,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass);
 
 Check Response :
