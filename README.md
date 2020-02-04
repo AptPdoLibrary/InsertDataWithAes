@@ -8,6 +8,7 @@ Call function :
 Example :
 
 Givendata - $GivenData = "Status::::Pending::,::Username::::$Username";
+
 DatabaseConnection - Provide PdoDatabase connection ($stmt or $dbconnection or any custom object)
 
 DbTableName - Provide table name (Student or Staff or Any other table name)
