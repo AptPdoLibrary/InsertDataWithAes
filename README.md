@@ -18,11 +18,14 @@ How to Use FetchDataWithAes function ->
 
 Call function :
 
-$Response = FetchDataWithAes($GivenData,$Conditions,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass,$CheckFor = 'all');
+$Response = FetchDataWithAes($SearchData,$RequiredData,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass,$CheckFor = 'any' ,$CheckUserStatus = NULL,$FetchCount = NULL);
 
 Check Response :
 if($Response['status'] === 'Success' && $Response['code'] === 200){
-  #Code... (After data updated successfully into database)
+  #Code... (After data featch successfully into database)
+}else if($Response['code'] === 404){
+  #Code... (After Search data (Given condtion) not found in database)
 }else{
-  #Code...  (After data updation failed )
+  #Code...  (After data found process failed)
 }
+
