@@ -16,6 +16,9 @@ EncodeAndEncryptPass - Provide any password witch is used to encryped data (This
 
 $Response = InsertDataWithAes($GivenData,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass);
 
+Example :
+$Response = InsertDataWithAes("Status::::Pending::,::Username::::$Username",$stmt,'tablename','password');
+
 Check Response :
 if($Response['status'] === 'Success' && $Response['code'] === 200){
   #Code... (After data insert successfully into mysql database)
