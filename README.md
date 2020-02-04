@@ -14,15 +14,15 @@ if($Response['status'] === 'Success' && $Response['code'] === 200){
   #Code...  (After data insertion failed )
 }
 
-How to Use InsertDataWithAes function ->
+How to Use FetchDataWithAes function ->
 
 Call function :
 
-$Response = InsertDataWithAes($GivenData,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass);
+$Response = FetchDataWithAes($GivenData,$Conditions,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass,$CheckFor = 'all');
 
 Check Response :
 if($Response['status'] === 'Success' && $Response['code'] === 200){
-  #Code... (After data insert successfully into mysql database)
+  #Code... (After data updated successfully into database)
 }else{
-  #Code...  (After data insertion failed )
+  #Code...  (After data updation failed )
 }
