@@ -23,7 +23,7 @@
 			exit();
 		}
 
-		function UpdateGivenData($GivenData,$Conditions,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass,$CheckFor = 'all'){
+		function FetchDataWithAes($GivenData,$Conditions,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass,$CheckFor = 'all'){
 			if(strlen($GivenData) == 0){
 				return ["status"=>"Error","msg"=>"Process failed! Try again later"];
 				exit();
