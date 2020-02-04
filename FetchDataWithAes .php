@@ -1,9 +1,8 @@
 <?php
 	/*
-
-	*@filename FetchReuiredDataByGivenData/index.php
-	*@des It return data if Data exist otherwise it return error
-	*@Author Arpit sharma
+	*@filename - FetchDataWithAes.php
+	*@Des - It return required data where condtion(Search Data) match in given table. If there reason if process failed
+	*@Author - Arpit sharma
 	*/
 
 	function FetchDataWithAes($SearchData,$RequiredData,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass,$CheckFor = 'any' ,$CheckUserStatus = NULL,$FetchCount = NULL){
