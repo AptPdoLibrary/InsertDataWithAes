@@ -12,7 +12,7 @@ DatabaseConnection - Provide PdoDatabase connection ($stmt or $dbconnection or a
 
 DbTableName - Provide table name (Student or Staff or Any other table name)
 
-EncodeAndEncryptPass - Provide any password witch is used to encryped data (This password also use to decryped tha data, and use string as password for perform highly secure encryption)
+EncodeAndEncryptPass - Provide any password witch is used to encryped data (This password also use to decryped the data, and use string as password for perform highly secure encryption)
 
 $Response = InsertDataWithAes($GivenData,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass);
 
