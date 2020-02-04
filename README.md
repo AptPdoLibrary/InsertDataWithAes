@@ -5,9 +5,14 @@ How to Use InsertDataWithAes function ->
 
 Call function :
 
-example Givendata -
+Example :
 
-$GivenData = "Status::::Pending::,::Username::::$Username";
+Givendata - $GivenData = "Status::::Pending::,::Username::::$Username";
+DatabaseConnection - Provide PdoDatabase connection ($stmt or $dbconnection or any custom object)
+
+DbTableName - Provide table name (Student or Staff or Any other table name)
+
+EncodeAndEncryptPass - Provide any password witch is used to encryped data (This password also use to decryped tha data, and use string as password for highly secure encryption)
 
 $Response = InsertDataWithAes($GivenData,$DatabaseConnection,$DbTableName,$EncodeAndEncryptPass);
 
