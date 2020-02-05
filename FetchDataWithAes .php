@@ -29,7 +29,7 @@
 					if($i === 1){
 						if($CheckFor === 'any' || $CheckFor === 'all'){
 							$StmtSearchKeyAndPreparedKey = $TmpSearchDataArray[0]." = AES_ENCRYPT(:".$TmpSearchDataArray[0]."Srh, :EncodeAndEncryptPass)";
-						}else if($CheckFor === 'StartLike' || $CheckFor === 'LikeLast' || $CheckFor === 'StartLikeLast'){
+						}else if($CheckFor === 'StartLikeAny' || $CheckFor === 'LikeLastAny' || $CheckFor === 'StartLikeLastAny'){
 							$StmtSearchKeyAndPreparedKey = "AES_DECRYPT(".$TmpSearchDataArray[0].", :EncodeAndEncryptPass) LIKE :".$TmpSearchDataArray[0].'Srh';
 						}else if($CheckFor === 'NotEqualAny' || $CheckFor === 'NotEqualAll'){
 							$StmtSearchKeyAndPreparedKey = $TmpSearchDataArray[0]." != AES_ENCRYPT(:".$TmpSearchDataArray[0]."Srh, :EncodeAndEncryptPass)";
@@ -41,7 +41,7 @@
 							$StmtSearchKeyAndPreparedKey = $StmtSearchKeyAndPreparedKey." || ".$TmpSearchDataArray[0]." = AES_ENCRYPT(:".$TmpSearchDataArray[0]."Srh, :EncodeAndEncryptPass)";
 						}else if($CheckFor === 'all'){
 							$StmtSearchKeyAndPreparedKey = $StmtSearchKeyAndPreparedKey." && ".$TmpSearchDataArray[0]." = AES_ENCRYPT(:".$TmpSearchDataArray[0]."Srh, :EncodeAndEncryptPass)";
-						}else if($CheckFor === 'StartLike' || $CheckFor === 'LikeLast' || $CheckFor === 'StartLikeLast'){
+						}else if($CheckFor === 'StartLikeAny' || $CheckFor === 'LikeLastAny' || $CheckFor === 'StartLikeLastAny'){
 							$StmtSearchKeyAndPreparedKey = $StmtSearchKeyAndPreparedKey." || AES_DECRYPT(".$TmpSearchDataArray[0].", :EncodeAndEncryptPass) LIKE :".$TmpSearchDataArray[0].'Srh';
 						}else if($CheckFor === 'NotEqualAny'){
 							$StmtSearchKeyAndPreparedKey = $StmtSearchKeyAndPreparedKey." || ".$TmpSearchDataArray[0]." != AES_ENCRYPT(:".$TmpSearchDataArray[0]."Srh, :EncodeAndEncryptPass)";
@@ -103,17 +103,17 @@
 						$stmt->bindValue(':'.$StmtSearchKey[$i] , $value, PDO::PARAM_STR);
 						$i++;
 					}
-				}else if($CheckFor === 'StartLike'){
+				}else if($CheckFor === 'StartLikeAny'){
 					foreach ($StmtSearchValue as $value) {
 						$stmt->bindValue(':'.$StmtSearchKey[$i] , '%'.$value, PDO::PARAM_STR);
 						$i++;
 					}
-				}else if($CheckFor === 'LikeLast'){
+				}else if($CheckFor === 'LikeLastAny'){
 					foreach ($StmtSearchValue as $value) {
 						$stmt->bindValue(':'.$StmtSearchKey[$i] , $value.'%', PDO::PARAM_STR);
 						$i++;
 					}
-				}else if($CheckFor === 'StartLikeLast'){
+				}else if($CheckFor === 'StartLikeLastAny'){
 					foreach ($StmtSearchValue as $value) {
 						$stmt->bindValue(':'.$StmtSearchKey[$i] , '%'.$value.'%', PDO::PARAM_STR);
 						$i++;
