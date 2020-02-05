@@ -55,6 +55,8 @@ Example :-
 
 $SearchData = "Username::::$Username::,::UserId::::$UserId"; (It is use for condtion like Where Username equal to $Username, If Given column not available in table then it return an error)
 
+none - Use none for gate all data of given table
+
 $RequiredData = 'Name::::Class::::Gander'; (It is use to which get Data from table. If Given column not available in table then it return an error)
 
 DatabaseConnection :-
