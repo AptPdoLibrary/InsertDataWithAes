@@ -37,7 +37,7 @@
 						array_push($StmtGivenDataKey, $TmpGivenDataArray[0]);
 						array_push($StmtGivenDataVal, $TmpGivenDataArray[1]);
 					}else{
-						return ["status"=>"Error","msg"=>"Null value found in given data","code"=>400];
+						return ["status"=>"Error","msg"=>"Null value found for column in given data","code"=>400];
 					}
 				}else{
 					return ["status"=>"Error","msg"=>"Null Column found in given data","code"=>400];
